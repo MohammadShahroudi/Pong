@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     // private float time = 0.0f;
     // private bool isMoving = false;
     // private bool isJumpPressed = false;
-    Vector3 eulerAngleVelocity;
+    //Vector3 eulerAngleVelocity;
 
     public float ballSpeed = 5.0f;
     private Rigidbody rb;
@@ -45,8 +45,8 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-       Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.fixedDeltaTime);
-       rb.MoveRotation(rb.rotation * deltaRotation);
+        //    Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.fixedDeltaTime);
+        //    rb.MoveRotation(rb.rotation * deltaRotation);
     }
 
     void OnCollisionStay(Collision collision)
@@ -55,8 +55,15 @@ public class Ball : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
+        Vector3 newVelocity = new Vector3(0.0f, 0.0f, 0.0f);
+        Vector3 currentVelocity = rb.linearVelocity;
 
+        newVelocity = currentVelocity + new Vector3(2.0f, 0.0f, 3.0f);
+        Debug.Log("Velocity: " + currentVelocity);
+        rb.linearVelocity = newVelocity;
+
+        
     }
 }
