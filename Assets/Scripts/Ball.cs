@@ -9,6 +9,14 @@ public class Ball : MonoBehaviour
     // private bool isJumpPressed = false;
     //Vector3 eulerAngleVelocity;
 
+    // GameObject leftPaddle
+    // GameObject rightPaddle
+    // GameObject ball
+    public GameObject leftPaddle;
+    public GameObject rightPaddle;
+    public GameObject ball;
+    // public bool collision = false;
+
     public float ballSpeed = 5.0f;
     private Rigidbody rb;
 
@@ -50,14 +58,23 @@ public class Ball : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        // Debug.Log("Collision!");
-        
+       
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
+        leftPaddle = GameObject.FindWithTag("leftPaddle");
+        rightPaddle = GameObject.FindWithTag("rightPaddle");
+        ball = GameObject.FindWithTag("Ball");
+
         Vector3 newVelocity = new Vector3(0.0f, 0.0f, 0.0f);
         Vector3 currentVelocity = rb.linearVelocity;
+
+        
+        if (collision.gameObject.CompareTag("rightPaddle"))
+        {
+            Debug.Log("Collision!");
+        }
 
         newVelocity = currentVelocity + new Vector3(2.0f, 0.0f, 3.0f);
         Debug.Log("Velocity: " + currentVelocity);
