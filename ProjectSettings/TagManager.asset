@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rightPaddle
   - leftPaddle
+  - Ball
   layers:
   - Default
   - TransparentFX

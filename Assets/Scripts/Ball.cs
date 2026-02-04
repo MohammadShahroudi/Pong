@@ -12,7 +12,6 @@ public class Ball : MonoBehaviour
     public float ballSpeed = 5.0f;
     private Rigidbody rb;
 
-
     // Adjust the force strength in the Inspector
     public float forceMagnitude = 20.0f;
     // Sets it at 45 degrees
