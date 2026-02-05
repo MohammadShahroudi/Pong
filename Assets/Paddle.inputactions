@@ -1,0 +1,76 @@
+{
+    "name": "Paddle",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "ff3d24d0-a7fc-42e3-900a-0ce285449de0",
+            "actions": [
+                {
+                    "name": "leftPaddle",
+                    "type": "PassThrough",
+                    "id": "002132f9-6eef-4547-802e-91258e02fab8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "rightPaddle",
+                    "type": "PassThrough",
+                    "id": "925ad3c8-ec00-4c4c-b3aa-7429664a71c2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e9c6bc32-5f78-4a1c-8dc9-f16f8e03f304",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rightPaddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2740de37-9b28-4265-a929-3a08e04bea2d",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rightPaddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e628e0bc-5a21-42cd-9256-5b3538fac185",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "leftPaddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20d488be-479f-43cd-bf12-910dcbd5d83e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "leftPaddle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

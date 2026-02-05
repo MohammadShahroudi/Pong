@@ -4,7 +4,14 @@ using UnityEngine.InputSystem;
 
 public class gameManager : MonoBehaviour
 {
+    public GameObject leftGoal;
+    public GameObject rightGoal;
     private Rigidbody rb;
+
+    // Round starts spawn ball
+    // if player was scored on then destroy ball
+    // increment score to player
+    // spawn new ball towards player who was just scored on
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,5 +23,10 @@ public class gameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
     }
 }
