@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 211730976}
   - component: {fileID: 211730975}
   - component: {fileID: 211730974}
+  - component: {fileID: 211730978}
   m_Layer: 0
   m_Name: leftGoal
   m_TagString: leftGoal
@@ -702,7 +703,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -715,7 +716,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211730973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -770,8 +771,76 @@ Transform:
   m_GameObject: {fileID: 211730973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.78, y: -0.346, z: 0.11}
+  m_LocalPosition: {x: -15.49, y: 0.18, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211730978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211730973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b0901c18d046d79f40ad294fceaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGoal: {fileID: 211730973}
+  rightGoal: {fileID: 1082009427}
+  leftPaddleScore: 0
+  rightPaddleScore: 0
+  count: 0
+  countText: {fileID: 458253096}
+--- !u!1 &281740892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281740894}
+  - component: {fileID: 281740893}
+  m_Layer: 0
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &281740893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281740892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b0901c18d046d79f40ad294fceaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGoal: {fileID: 0}
+  rightGoal: {fileID: 0}
+  leftPaddleScore: 0
+  rightPaddleScore: 0
+  count: 0
+  countText: {fileID: 458253096}
+--- !u!4 &281740894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281740892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.86153036, y: 0.6800019, z: 1.0934244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1061,6 +1130,7 @@ MonoBehaviour:
   maxZ: 5
   leftPaddle: {fileID: 0}
   rightPaddle: {fileID: 0}
+  move: {fileID: 0}
 --- !u!65 &510815709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1308,6 +1378,7 @@ MonoBehaviour:
   maxZ: 5
   leftPaddle: {fileID: 0}
   rightPaddle: {fileID: 0}
+  move: {fileID: 0}
 --- !u!114 &698842275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,7 +1406,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: ff3d24d0-a7fc-42e3-900a-0ce285449de0
+  m_DefaultActionMap: New action map
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &733193853
@@ -1551,6 +1622,7 @@ GameObject:
   - component: {fileID: 1082009430}
   - component: {fileID: 1082009429}
   - component: {fileID: 1082009428}
+  - component: {fileID: 1082009432}
   m_Layer: 0
   m_Name: rightGoal
   m_TagString: rightGoal
@@ -1573,7 +1645,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1586,7 +1658,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082009427}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1641,12 +1713,30 @@ Transform:
   m_GameObject: {fileID: 1082009427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.04, y: -0.346, z: 0.11}
+  m_LocalPosition: {x: 20.62, y: 0.14, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082009432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082009427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3b0901c18d046d79f40ad294fceaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGoal: {fileID: 211730973}
+  rightGoal: {fileID: 1082009427}
+  leftPaddleScore: 0
+  rightPaddleScore: 0
+  count: 0
+  countText: {fileID: 458253096}
 --- !u!1 &1239312703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,3 +2021,4 @@ SceneRoots:
   - {fileID: 2037213575}
   - {fileID: 1082009431}
   - {fileID: 211730977}
+  - {fileID: 281740894}

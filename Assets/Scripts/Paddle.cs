@@ -11,6 +11,8 @@ public class DemoPaddle : MonoBehaviour
     public GameObject leftPaddle;
     public GameObject rightPaddle;
 
+    public InputActionReference move;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,8 @@ public class DemoPaddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // _moveDirection = move.action.ReadValue<Vector2>();
 
         leftPaddle = GameObject.FindWithTag("leftPaddle");
         rightPaddle = GameObject.FindWithTag("rightPaddle");
